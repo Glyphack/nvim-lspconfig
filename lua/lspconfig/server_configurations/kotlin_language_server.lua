@@ -24,6 +24,11 @@ return {
     filetypes = { 'kotlin' },
     root_dir = util.root_pattern(unpack(root_files)),
     cmd = { bin_name },
+  init_options = {
+    -- followed https://github.com/fwcd/vscode-kotlin/pull/86/files
+    -- added in https://github.com/fwcd/kotlin-language-server/pull/337
+    storagePath = "~/kotin-cache/"
+  }
   },
   docs = {
     description = [[
